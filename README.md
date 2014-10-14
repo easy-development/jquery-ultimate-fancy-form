@@ -1,4 +1,4 @@
-jquery-ultimate-fancy-form
+jQuery Ultimate Fancy Form
 ==========================
 
 Learn more : http://demonstration.easy-development.com/jquery-ultimate-fancy-form/
