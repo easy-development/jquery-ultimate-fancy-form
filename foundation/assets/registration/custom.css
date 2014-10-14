@@ -1,0 +1,184 @@
+ol,ul{list-style:none; padding: 0; margin: 0;}
+input , select { outline: none; }
+a:hover{color: #64B7FF; text-decoration: none;}
+.clear {clear: both;}
+.p0 {padding: 0px !important;}
+.m0 {margin: 0px !important;}
+.fr {float: right !important;}
+.fl {float: left !important;}
+.tr {text-align: right !important;}
+.tl {text-align: left !important;}
+
+.pb12 { padding-bottom: 12px !important; }
+.pt12 { padding-top: 12px !important; }
+.p15 { padding: 15px ; }
+
+/** Customizing the EM Select **/
+.jquery-em-interactive-container {
+  color: #3498db;
+}
+
+/** Make a smooth display with Story Box, we're going to add this **/
+[data-sb] {
+  opacity: 0;
+}
+
+/** The Sliding Container can have a few quirks, it is suggested we always use a width for each div **/
+form.uff-form-sliding > div.sliding-container > div {
+  width: 860px;
+} 
+
+body {
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: #000;
+  color: #fff;
+}
+.container {
+  padding: 15px;
+  width: 960px;
+  padding-top: 5%;
+  margin: 0 auto;
+}
+.form {
+  background-image: url(form-bg.png);
+}
+.title {
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+}
+.alert-error {
+  width: 100%;
+  margin: 0;
+  text-align: right;
+  color: #e74c3c;
+  float: left;
+  background: none;
+  border: none;
+}
+.form-group .form-control {
+  width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+
+
+
+
+
+.nav-control {
+  margin-bottom: 10px;
+}
+.nav-control > ul > li {
+  float: left;
+  width: 50%;
+  display: inline-block;
+}
+.nav-control > ul > li > a {
+  background: #ecf0f1;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+.nav-control > ul > li > a:hover {
+  background: #3498db;
+  color: #ffffff;
+}
+.nav-control > ul > li > a.active {
+  background: #2980b9;
+  color: #ffffff;
+}
+.pager > li > a {
+  cursor: pointer;
+}
+.pager > li.right {
+  float: right;
+  display: block;
+}
+.pager > li.left {
+  float: left;
+  display: block;
+  margin-left: 10px;
+}
+.form p , .form h5 {
+  color: #fff;
+  font-size: 14px;
+  margin: 0 0 9px 0;
+}
+.form .right p {
+  line-height: 1.42857143;
+  margin-bottom: 10px;
+}
+.form .right a {
+  color: #fff;
+}
+.sub-title{
+  font-size: 18px;
+  color: #fff;
+}
+hr {
+  margin: 15px 0 15px 0;
+}
+
+
+
+.form-group label {
+  padding: 0;
+  line-height: 1.5em;
+  color: #fff;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-weight: bold;
+  text-align: right;
+}
+.form .form-group input {
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+}
+.form .form-group input , 
+.form .form-group select {
+  border-radius: 4px;
+  margin: 0;
+  border: 0;
+  color: #555;
+  font-size: 14px;
+}
+.form-group {
+  float: left;
+  width: 100%;
+  padding-bottom: 15px;
+}
+.form-group span {
+  padding: 8px 0;
+}
+.alert-box {
+  margin: 0;`
+}
+.button {
+  width: auto;
+}
+
+
+
+.sliding-container > div > div {
+  width: 67%;
+}
+
+.uff-form-sliding > .sliding-container > div {
+  width: 910px;
+}
+
+
+.input_replicate h4{
+  margin-left: 24px;
+}

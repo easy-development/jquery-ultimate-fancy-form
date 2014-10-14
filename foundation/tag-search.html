@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tag Search - jQuery Ultimate Fancy Form</title>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <script src="../uff/jquery.js"></script>
+  <link href="../uff/animate.css" rel="stylesheet" type="text/css">
+  <script src="../uff/jquery-ultimate-fancy-form.min.js"></script>
+  <link href="../uff/jquery-ultimate-fancy-form.css" rel="stylesheet" type="text/css">
+
+
+  <link href="assets/foundation/css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="assets/foundation/css/foundation.min.css" rel="stylesheet" type="text/css">
+  <script src="assets/foundation/js/foundation.min.js"></script>
+  <link href="assets/foundation/css/foundation.css" rel="stylesheet" type="text/css">
+
+  <script src="assets/foundation/js/foundation/foundation.alert-box warning.js"></script>
+  <script src="assets/foundation/js/foundation/foundation.js"></script>
+  <script src="assets/foundation/js/foundation/foundation.dropdown.js"></script>
+
+  <link href="assets/tag-search/custom.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="container row">
+  <form class="form form-horizontal component-uff" onkeypress="return event.keyCode != 13;" role="form">
+    <div data-step>
+      <div class="header col-xs-12">
+        <h3 class="title">Tag Search</h3>
+      </div>
+
+      <div class="clear"></div>
+
+      <div class="row">
+        <div class="columns large-10 alert-example ">
+          <div class="alert-box warning radius warning-danger">
+            <p class="text-center">This example requires PHP to work</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="columns large-2 control-label">To</label>
+        <div data-mt data-mt-request-url="assets/tag-search/search-response.php" data-mt-max-tags="3" class="columns large-10">
+          <input type="text" data-mt-filter-control="" id="to-message" class="form-control" placeholder="Type in Mary" style="width: auto;" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="columns large-2 control-label">Title</label>
+        <div class="columns large-10">
+          <input type="text" class="form-control" data-validation-required="#title_error_required">
+
+          <div class="clear"></div>
+
+          <div id="title_error_required" class="alert-box warning warning-danger">
+            Title is required
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="columns large-2 control-label">Message</label>
+        <div class="columns large-10">
+          <textarea class="form-control" data-validation-required="#message_error_required"></textarea>
+
+          <div class="clear"></div>
+
+          <div id="message_error_required" class="alert-box warning warning-danger">
+            The message content is required
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="columns large-10 fr">
+          <a class="small radius success button columns small-3" data-step-finish>Send</a>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+      <br/>
+    </div>
+  </form>
+</div>
+</body>
+</html>

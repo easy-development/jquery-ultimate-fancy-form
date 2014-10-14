@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Documentation - jQuery Ultimate Fancy Form</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+    body > .container {
+      min-width: 960px;
+    }
+
+    #options hr {
+      margin: 40px 0;
+    }
+
+    h1 {
+      background: #3498db;
+      margin: 0;
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 0 0 0 10px;
+    }
+
+    #scroll-spy {
+      top: 0;
+      background: #3498db;
+      position: fixed;
+      padding: 40px 0;
+      border-radius: 0 0 10px 10px;
+    }
+
+    #scroll-spy > ul > li {
+      background: #3498db;
+      color: #FFFFFF;
+      padding: 0 20px;
+    }
+
+    #scroll-spy > ul > li:hover,
+    #scroll-spy > ul > li:hover > a,
+    #scroll-spy > ul > li.active:hover {
+      background: #e74c3c;
+    }
+
+    #scroll-spy > ul > li.active {
+      background: #2ecc71;
+    }
+
+    #scroll-spy > ul > li > a {
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#scroll-spy">
+<div class="container" >
+  <div class="row">
+    <div class="col-md-offset-3">
+      <h1>jQuery Ultimate Fancy Form - Documentation</h1>
+    </div>
+  </div>
+
+  <div id="options" class="row">
+    <div class="col-md-3">
+      <div id="scroll-spy" role="complementary" class="hidden-print affix-top">
+        <ul class="nav">
+          <li class="active">
+            <a href="#section-0">Including the Library</a>
+          </li>
+          <li>
+            <a href="#section-1">I. Step Controller</a>
+          </li>
+          <li>
+            <a href="#section-2">II. Step Controller Mirror</a>
+          </li>
+          <li>
+            <a href="#section-3">III. Input Mirror</a>
+          </li>
+          <li>
+            <a href="#section-4">IV. Length Controller</a>
+          </li>
+          <li>
+            <a href="#section-5">V. Digits Only</a>
+          </li>
+          <li>
+            <a href="#section-6">VI. Elegant Sound</a>
+          </li>
+          <li>
+            <a href="#section-7">VII. Horizontal Select</a>
+          </li>
+          <li>
+            <a href="#section-8">VIII. Easy Multiple Select</a>
+          </li>
+          <li>
+            <a href="#section-9">IX. Story Box</a>
+          </li>
+          <li>
+            <a href="#section-10">X. Multiple Tag Select</a>
+          </li>
+          <li>
+            <a href="#section-11">XI. Story Tale</a>
+          </li>
+          <li>
+            <a href="#section-12">XII. Validation</a>
+          </li>
+          <li>
+            <a href="#section-13">XIII. Input Replica</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <h3 id="section-0">Setting Up The Library</h3>
+
+      <p>Setting Ultimate Fancy Form is really easy, you just have to do a few things</p>
+
+      <h4>1. Make sure you have jQuery</h4>
+      <p>If you don't have jQuery in your project, no worries, UFF has it prepared, add this line in your <span class="label label-danger">head</span> section</p>
+
+      <code>
+        &lt;script src=&quot;uff/jquery.js&quot;&gt;&lt;/script&gt;
+      </code>
+
+      <div class="clearfix"></div><br/>
+
+      <h4>2. Include jQuery UFF in your project</h4>
+      <p>Add the following in your <span class="label label-danger">head</span> section</p>
+
+      <code>
+        &lt;link href=&quot;uff/animate.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;  <br/>
+        &lt;script src=&quot;uff/jquery-ultimate-fancy-form.min.js&quot;&gt;&lt;/script&gt; <br/>
+        &lt;link href=&quot;uff/jquery-ultimate-fancy-form.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+      </code>
+
+      <div class="clearfix"></div>
+
+      <br/>
+
+      <h4>3. Mark your <span class="label label-primary">form</span> to use uff, by adding this class to it <span class="label label-danger">component-uff</span></h4>
+
+      <br>
+
+      <h4>4. Start Building.</h4>
+
+      <hr/>
+
+      <h3 id="section-1">I. Step Controller</h3>
+
+      <p>The Step Controller is the <strong>CORE</strong> functionality of Ultimate Fancy Form</p>
+      <p>Inside your <code>&lt;form&gt;</code> you will have N amount of steps, these steps are marked with <span class="label label-danger">data-step</span></p>
+
+      <h3>Step Usage Example</h3>
+
+      <code>
+        &lt;form&gt; <br/>
+        &nbsp;&nbsp; &lt;div data-step&gt;&lt;/div&gt; <br/>
+        &nbsp;&nbsp; &lt;div data-step&gt;&lt;/div&gt; <br/>
+        &lt;/form&gt;
+      </code>
+
+      <div class="clearfix"></div>
+      <br/>
+
+      <p class="alert alert-info">All the steps must be in the same container.</p>
+
+      <h3>Moving Trough Steps</h3>
+
+      <p>Moving From one step to another is easy, list of options</p>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Attribute Name</th>
+          <th>Attribute Role</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>data-step-next</td>
+          <td>Display the next step</td>
+        </tr>
+        <tr>
+          <td>data-step-previous</td>
+          <td>Display the previous step</td>
+        </tr>
+        <tr>
+          <td>data-step-display="%step_number%"</td>
+          <td>Display a certain step, this is index based, so it starts from 0</td>
+        </tr>
+        <tr>
+          <td>data-step-finish</td>
+          <td>This is the marker that tells Ultimate Fancy Form that this is the final step</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h3>Moving Trough Steps Example</h3>
+
+      <code>
+        &lt;form&gt; <br/>
+        &nbsp;&nbsp;  &lt;div data-step&gt; <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;  &lt;a data-step-next&gt;Next Step&lt;/a&gt; <br/>
+        &nbsp;&nbsp;  &lt;/div&gt; <br/>
+        &nbsp;&nbsp;  &lt;div data-step&gt; <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;  &lt;a data-step-previous&gt;Previous Step&lt;/a&gt; <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;  &lt;a data-step-next&gt;Next Step&lt;/a&gt; <br/>
+        &nbsp;&nbsp;  &lt;/div&gt; <br/>
+        &nbsp;&nbsp;  &lt;div data-step&gt; <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;  &lt;a data-step-previous&gt;Previous Step&lt;/a&gt; <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;  &lt;a data-step-finish&gt;Submit Form&lt;/a&gt; <br/>
+        &nbsp;&nbsp; &lt;/div&gt; <br/>
+        &lt;/form&gt;
+      </code>
+
+      <h4>Implementation Examples</h4>
+
+      <a class="btn btn-primary" target="_blank" href="../bootstrap/settings.html">
+        Bootstrap &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../workless/settings.html">
+        Workless &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../foundation/settings.html">
+        Foundation 5 &raquo;
+      </a>
+
+      <hr/>
+
+      <h3 id="section-2">II. Step Controller Mirror</h3>
+
+      <p>This feature is something out of the box, there are few examples where you could use it.</p>
+
+      <p class="alert alert-info">All Step Mirrors must be in the same container.</p>
+
+      <div class="clearfix"></div>
+      <br/>
+
+      <h3>Available Options</h3>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Attribute Name</th>
+          <th>Attribute Role</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>data-step-mirror</td>
+          <td>Display only this container on a certain step. For Example for data-step 3, only data-step-mirror 3 would be displayed</td>
+        </tr>
+        <tr>
+          <td>data-step-mirror-cascading</td>
+          <td>Display this container on a certain step and the previous ones. For Example for data-step 3, this would display data-step-mirror-cascading 1 and 2 also</td>
+        </tr>
+        </tbody>
+      </table>
+
+
+      <h4>Implementation Examples</h4>
+
+      <a class="btn btn-primary" target="_blank" href="../bootstrap/registration.html">
+        Bootstrap &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../workless/registration.html">
+        Workless &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../foundation/registration.html">
+        Foundation 5 &raquo;
+      </a>
+
+      <hr/>
+
+      <h3 id="section-3">III. Input Mirror</h3>
+
+      <p>Easily display the value of an input in a certain container</p>
+
+      <p>Attribute Name : <span class="label label-danger">data-input-mirror</span></p>
+
+      <h4>Binding a Input Mirror By Name : </h4>
+
+      <code>
+        &lt;span data-input-mirror='[name=&quot;input_name&quot;]'&gt;&lt;/span&gt;
+      </code>
+
+      <h4>Binding a Input Mirror By Class : </h4>
+
+      <code>
+        &lt;span data-input-mirror=&quot;.input_class&quot;&gt;&lt;/span&gt;
+      </code>
+
+      <h4>Binding a Input Mirror By Id : </h4>
+
+      <code>
+        &lt;span data-input-mirror=&quot;#input-id&quot;&gt;&lt;/span&gt;
+      </code>
+
+      <h4>Implementation Examples</h4>
+
+      <a class="btn btn-primary" target="_blank" href="../bootstrap/settings.html">
+        Bootstrap &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../workless/settings.html">
+        Workless &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../foundation/settings.html">
+        Foundation 5 &raquo;
+      </a>
+
+      <hr/>
+
+
+      <h3 id="section-4">IV. Length Controller</h3>
+
+      <p>Easily Limit an input to a certain amount of characters, using an attribute</p>
+
+      <p>Attribute Name : <span class="label label-danger">data-length-max</span></p>
+
+      <h4>Setting a 4 chars limit input : </h4>
+
+      <code>
+        &lt;input name=&quot;name&quot; data-length-max=&quot;4&quot;/&gt;
+      </code>
+
+      <h4>Setting a 16 chars limit input : </h4>
+
+      <code>
+        &lt;input name=&quot;name&quot; data-length-max=&quot;16&quot;/&gt;
+      </code>
+
+      <h4>Implementation Examples</h4>
+
+      <a class="btn btn-primary" target="_blank" href="../bootstrap/settings.html">
+        Bootstrap &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../workless/settings.html">
+        Workless &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../foundation/settings.html">
+        Foundation 5 &raquo;
+      </a>
+
+      <hr/>
+
+      <h3 id="section-5">V. Digits Only</h3>
+
+      <p>Force an input to allow only digits, using an attribute</p>
+
+      <p>Attribute Name : <span class="label label-danger">data-digits-only</span></p>
+
+      <h4>Usage Example : </h4>
+
+      <code>
+        &lt;input name=&quot;name&quot; data-digits-only/&gt;
+      </code>
+
+      <h4>Implementation Examples</h4>
+
+      <a class="btn btn-primary" target="_blank" href="../bootstrap/settings.html">
+        Bootstrap &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../workless/settings.html">
+        Workless &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../foundation/settings.html">
+        Foundation 5 &raquo;
+      </a>
+
+      <hr/>
+
+      <h3 id="section-6">VI. Elegant Sound</h3>
+
+      <p>Add a sound to any element interaction, easily.</p>
+
+      <h4>Adding a sound to an input : </h4>
+
+      <code>
+        &lt;input name=&quot;name&quot; data-elegant-sound=&quot;assets/sounds/sound-name.mp3&quot;/&gt;
+      </code>
+
+      <h4>Adding a sound to an input that plays on hover : </h4>
+
+      <code>
+        &lt;input name=&quot;name&quot; data-elegant-sound=&quot;assets/sounds/sound-name.mp3&quot; data-elegant-sound-on=&quot;hover&quot;/&gt;
+      </code>
+
+      <h4>Adding a sound to an input that plays on <strong>mouseout</strong> of an area: </h4>
+
+      <code>
+        &lt;div data-elegant-sound=&quot;assets/sounds/sound-name.mp3&quot; data-elegant-sound-on=&quot;hover&quot;&gt;&lt;/div&gt;
+      </code>
+
+      <h4>Available Params : </h4>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Attribute Name</th>
+            <th>Attribute Role</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>data-elegant-sound</td>
+            <td>The sound mp3 file path</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>data-elegant-sound-on</td>
+            <td>The event/events you want play the song on</td>
+            <td>click change keyup</td>
+          </tr>
+          <tr>
+            <td>data-elegant-sound-duration</td>
+            <td>The duration of the sound in miliseconds</td>
+            <td>1000</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr/>
+
+      <h3 id="section-7">VII. Horizontal Select</h3>
+
+      <p>You can add a horizontal select easily by adding this class <span class="label-primary label">eh-select</span></p>
+
+      <p class="text-warning">This feature is undocumented right now because it's not a highly customizable feature</p>
+
+      <hr/>
+
+      <h3 id="section-8">VIII. Easy Multiple Select</h3>
+
+      <p>You can add easy multiple select easily by adding this class <span class="label-primary label">em-select</span></p>
+
+      <p class="text-warning">This feature is undocumented right now because it's not a highly customizable feature</p>
+
+      <h4>Implementation Examples</h4>
+
+      <a class="btn btn-primary" target="_blank" href="../bootstrap/settings.html">
+        Bootstrap &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../workless/settings.html">
+        Workless &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../foundation/settings.html">
+        Foundation 5 &raquo;
+      </a>
+
+      <hr/>
+
+      <h3 id="section-9">IX. Story Box</h3>
+
+      <p>This is an integrated version of Story Box specially designed to work with step based forms</p>
+
+      <h4>How to use Story Box</h4>
+
+      <p><a class="btn btn-primary" href="story-box.html">View the documentation &raquo;</a></p>
+
+      <h4>Implementation Examples</h4>
+
+      <a class="btn btn-primary" target="_blank" href="../bootstrap/settings.html">
+        Bootstrap &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../workless/settings.html">
+        Workless &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../foundation/settings.html">
+        Foundation 5 &raquo;
+      </a>
+
+      <hr/>
+
+      <h3 id="section-10">X. Multiple Tag Select</h3>
+
+      <p>This is an highly customizable feature. You will need to have a server to test & use this, as it relies on backend programming</p>
+
+      <h4>Implementation Examples</h4>
+
+      <a class="btn btn-primary" target="_blank" href="../bootstrap/tag-search.html">
+        Bootstrap &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../workless/tag-search.html">
+        Workless &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../foundation/tag-search.html">
+        Foundation 5 &raquo;
+      </a>
+
+      <h4>Available Options</h4>
+
+      <h4 class="text-danger">Required</h4>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Alias</th>
+          <th>Description</th>
+          <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>data-mt-request-url</td>
+          <td>The location where the information will be pulled</td>
+          <td><a class="btn btn-primary" href="#data-mt-max-tags">Read More</a></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h4 class="text-success">Optional</h4>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Alias</th>
+          <th>Description</th>
+          <th>Default</th>
+          <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>data-mt-max-tags</td>
+          <td>Max Selected Options</td>
+          <td>1</td>
+          <td><a class="btn btn-primary" href="#data-mt-max-tags">Read More</a></td>
+        </tr>
+        <tr>
+          <td>data-mt-request-method</td>
+          <td>Request Method used to fetch the information from data-mt-request-url</td>
+          <td>POST</td>
+          <td><a class="btn btn-primary" href="#data-mt-request-method">Read More</a></td>
+        </tr>
+        <tr>
+          <td>data-mt-request-tag-name</td>
+          <td>Change the param name that specifies the searched term, which is send to data-mt-request-url</td>
+          <td>mt_filter</td>
+          <td><a class="btn btn-primary" href="#data-mt-request-tag-name">Read More</a></td>
+        </tr>
+        <tr>
+          <td>data-mt-request-selected-tags-name</td>
+          <td>Change the param name that specifies the selected term ids / keys, which is send to data-mt-request-url</td>
+          <td>mt_selected</td>
+          <td><a class="btn btn-primary" href="#data-mt-request-selected-tags-name">Read More</a></td>
+        </tr>
+        <tr>
+          <td>data-mt-clear-on-select</td>
+          <td>Clear Search Input on Option Select</td>
+          <td>1</td>
+          <td><a class="btn btn-primary" href="#data-mt-clear-on-select">Read More</a></td>
+        </tr>
+        <tr>
+          <td>data-mt-close-on-select</td>
+          <td>Close Selection Modal on Option Select</td>
+          <td>1</td>
+          <td><a class="btn btn-primary" href="#data-mt-close-on-select">Read More</a></td>
+        </tr>
+        <tr>
+          <td>data-mt-close-on-unfocus</td>
+          <td>Close Selection Modal on Input unfocus </td>
+          <td>1</td>
+          <td><a class="btn btn-primary" href="#data-mt-close-on-unfocus">Read More</a></td>
+        </tr>
+        <tr>
+          <td>data-mt-tag-input-name</td>
+          <td>Selected option name within the HTML Form</td>
+          <td>tag</td>
+          <td><a class="btn btn-primary" href="#data-mt-tag-input-name">Read More</a></td>
+        </tr>
+        <tr>
+          <td>data-mt-default-values</td>
+          <td>Default Values</td>
+          <td>None</td>
+          <td><a class="btn btn-primary" href="#data-mt-default-values">Read More</a></td>
+        </tr>
+        <tr>
+          <td>data-mt-custom-param-</td>
+          <td>Extra Params on requests</td>
+          <td>None</td>
+          <td><a class="btn btn-primary" href="#data-mt-custom-param">Read More</a></td>
+        </tr>
+        <tr>
+          <td>data-mt-skeleton</td>
+          <td>Change the Display Skeleton</td>
+          <td>default</td>
+          <td><a class="btn btn-primary" href="#data-mt-skeleton">Read More</a></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <p><a class="btn btn-primary" style="float:right;" href="multiple-tag-select.html">Full Documentation &raquo;</a></p>
+      <div class="clearfix"></div>
+
+      <h3 id="section-11">XI. Story Tale</h3>
+
+      <p>This is an integrated version of Story Tale specially designed to work with step based forms</p>
+
+      <h4>How to use Story Tale</h4>
+
+      <p><a class="btn btn-primary" href="story-tale.html">View the documentation &raquo;</a></p>
+
+      <h4>Implementation Examples</h4>
+
+      <a class="btn btn-primary" target="_blank" href="../bootstrap/large-scale.html">
+        Bootstrap &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../workless/large-scale.html">
+        Workless &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../foundation/large-scale.html">
+        Foundation 5 &raquo;
+      </a>
+
+      <hr/>
+
+      <h3 id="section-12">XII. Validation</h3>
+
+      <p>Validation is a minimalist validation module, it offers the option to display a certain container if an error occurs.</p>
+
+      <h4>Making an input required - with error container ID identifier</h4>
+      <code>
+        &lt;input name=&quot;name&quot; data-validation-required=&quot;#input_name_required&quot;/&gt;
+        <br/>
+        &lt;div id=&quot;#input_name_required&quot;&gt;This field is required&lt;div&gt;
+      </code>
+
+      <h4>Making an input required - with error container class identifier</h4>
+      <code>
+        &lt;input name=&quot;name&quot; data-validation-required=&quot;.input_name_required&quot;/&gt;
+        <br/>
+        &lt;div class=&quot;input_name_required&quot;&gt;This field is required&lt;div&gt;
+      </code>
+
+      <h4>Available Validations</h4>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Alias</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>data-validation-required</td>
+            <td>Making an input required</td>
+          </tr>
+          <tr>
+            <td>data-validation-email</td>
+            <td>Making an input be validated if email</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>Tooltip Validation</h4>
+
+      <p>Add the following in your <span class="label label-danger">head</span> section</p>
+
+      <code>
+        &lt;link href=&quot;uff/hint.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+      </code>
+
+      <h4>What's the difference ?</h4>
+
+      <p>You need to add the following attribute to the inputs <span class="label label-danger">data-validation-tooltip</span></p>
+      <p>Inside your validation type, you're now going to put the displayed message instead of the container identifier :)</p>
+
+      <h4>Making an input required - with tooltip</h4>
+
+      <code>
+        &lt;input name=&quot;name&quot; data-validation-tooltip data-validation-required=&quot;This field is required&quot;/&gt;
+      </code>
+
+      <h4>Implementation Examples</h4>
+
+      <a class="btn btn-primary" target="_blank" href="../bootstrap/validation.html">
+        Bootstrap &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../workless/validation.html">
+        Workless &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../foundation/validation.html">
+        Foundation 5 &raquo;
+      </a>
+
+      <hr/>
+
+      <h3 id="section-13">XIII. Input Replica</h3>
+
+      <p>This is a new fancy feature, which allows you to have an input value in another input where needed, and you can also add validation rules</p>
+
+      <h4>Replicating an input without any rules </h4>
+
+      <code>
+        &lt;input name=&quot;name&quot; /&gt;
+        <br/>
+        &lt;input name=&quot;name_replica&quot; data-input-replica=&quot;[name='name']&quot;/&gt;
+      </code>
+
+      <h4>Replicating an input when a checkbox is checked </h4>
+
+      <code>
+        &lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;
+        <br/>
+        &lt;input type=&quot;text&quot; name=&quot;name_replica&quot; data-input-replica=&quot;[name='name']&quot; data-input-replica-on=&quot;[name='replicate_input_on']&quot; /&gt;
+        <br/>
+        &lt;input type=&quot;checkbox&quot; name=&quot;replicate_input_on&quot; /&gt;
+      </code>
+
+      <h4>Available Params</h4>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Alias</th>
+          <th>Description</th>
+          <th>Type</th>
+          <th>Default</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>data-input-replica</td>
+          <td>Making an input required</td>
+          <td>Required</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>data-input-replica-on</td>
+          <td>The input which tells the input replica when to replicate this certain input</td>
+          <td>Optional</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>data-input-replica-on-rule</td>
+          <td>The data-input-replica-on object will be verified using .is(data-input-replica-on-rule) if it return true, the replication process will take place</td>
+          <td>Optional</td>
+          <td>:checked</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h4>Implementation Examples</h4>
+
+      <a class="btn btn-primary" target="_blank" href="../bootstrap/input-replicate.html">
+        Bootstrap &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../workless/input-replicate.html">
+        Workless &raquo;
+      </a>
+
+      <a class="btn btn-primary" target="_blank" href="../foundation/input-replicate.html">
+        Foundation 5 &raquo;
+      </a>
+
+      <hr/>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="footer">
+    <p>&copy; Easy-Development 2014</p>
+  </div>
+
+</div> <!-- /container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+</body>
+</html>

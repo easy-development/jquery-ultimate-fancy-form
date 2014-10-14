@@ -1,0 +1,9 @@
+body {
+  background: #1C3146;
+  color: #ffffff;
+}
+
+.btn {
+  display: block;
+  margin-bottom: 5px;
+}

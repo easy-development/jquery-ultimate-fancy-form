@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Workless Examples - jQuery Ultimate Fancy Form</title>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="../uff/jquery.js"></script>
+
+  <link href="assets/workless/css/styles.css" rel="stylesheet" type="text/css">
+  <script src="assets/workless/js/ie_font.js"></script>
+  <script src="assets/workless/js/application.js"></script>
+  <script src="assets/workless/js/plugins.js"></script>
+  
+  <link href="assets/index/custom.css" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript">
+    jQuery(document).ready(function(){
+      var rowCols = jQuery('.row > .col-md-4 img'),
+          minHeight = rowCols.eq(0).css('height');
+
+      rowCols.load(function(){
+        resizeImages();
+      });
+
+      function resizeImages() {
+        minHeight = rowCols.eq(0).css('height');
+        rowCols.css('height', 'auto');
+        rowCols.each(function(){
+          minHeight = (minHeight < jQuery(this).height() ? minHeight : jQuery(this).height());
+        });
+        rowCols.css('height', minHeight);
+      }
+    });
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <h3>Workless Templates</h3>
+
+    <div class="row">
+      <div class="one_half col-md-4">
+        <a href="login.html" class="thumbnail">
+          <img alt="" src="assets/index/images/login.png">
+        </a>
+        <h6 class="text-center">Login Template</h6>
+      </div>
+
+      <div class="one_half col-md-4">
+        <a href="tag-search.html" class="thumbnail">
+          <img alt="" src="assets/index/images/tag-search.png">
+        </a>
+        <h6 class="text-center">Tag Search Template</h6>
+      </div>
+
+      <div class="one_half col-md-4">
+        <a href="registration.html" class="thumbnail">
+          <img alt="" src="assets/index/images/registration.png">
+        </a>
+        <h6 class="text-center">Registration Template</h6>
+      </div>
+
+      <div class="one_half col-md-4">
+        <a href="registration-sliding.html" class="thumbnail">
+          <img alt="" src="assets/index/images/registration-sliding.png">
+        </a>
+        <h6 class="text-center">Registration Template Sliding</h6>
+      </div>
+
+      <div class="one_half col-md-4">
+        <a href="settings.html" class="thumbnail">
+          <img alt="" src="assets/index/images/settings.png">
+        </a>
+        <h6 class="text-center">Settings Template</h6>
+      </div>
+
+      <div class="one_half col-md-4">
+        <a href="settings-sliding.html" class="thumbnail">
+          <img alt="" src="assets/index/images/settings-sliding.png">
+        </a>
+        <h6 class="text-center">Settings Sliding Template</h6>
+      </div>
+
+      <div class="one_half col-md-4">
+        <a href="large-scale.html" class="thumbnail">
+          <img alt="" src="assets/index/images/large-scale.png">
+        </a>
+        <h6 class="text-center">Large Scale Template</h6>
+      </div>
+
+      <div class="one_half col-md-4">
+        <a href="input-replicate.html" class="thumbnail">
+          <img alt="" src="assets/index/images/input-replicate.png">
+        </a>
+        <h6 class="text-center">Input Replica Template</h6>
+      </div>
+
+      
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Registration - jQuery Ultimate Fancy Form</title>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <script src="../uff/jquery.js"></script>
+  <link href="../uff/animate.css" rel="stylesheet" type="text/css">
+  <script src="../uff/jquery-ultimate-fancy-form.min.js"></script>
+  <link href="../uff/jquery-ultimate-fancy-form.css" rel="stylesheet" type="text/css">
+
+
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.js"></script>
+  <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+  <link href="assets/registration/custom.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="container row">
+  <div class="nav-control">
+    <ul>
+      <li><a href="registration.html">Classic</a></li>
+      <li><a class="active" href="registration-sliding.html">Sliding</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+  <div class="form-container">
+    <form class="form form-horizontal component-uff" data-step-method="sliding" onkeypress="return event.keyCode != 13;" role="form">
+      <h2 class="text-center">Registration</h2>
+
+      <div class="row">
+        <div class="col-md-8">
+          <div class="uff-form-sliding">
+            <div class="sliding-container">
+            <div data-step>
+              <h4 data-sb="fadeInLeft">Personal Information</h4>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" data-sb="fadeInRight">First Name</label>
+                <div class="col-sm-10">
+                  <input data-sb="fadeInLeft"
+                         type="text"
+                         class="form-control"
+                         data-validation-required="#first_name_error_required"
+                         name="first_name"
+                      >
+
+                  <div class="clearfix"></div>
+
+                  <div id="first_name_error_required" class="alert alert-danger">
+                    First Name is required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" data-sb="fadeInRight">Last Name</label>
+                <div class="col-sm-10">
+                  <input  data-sb="fadeInLeft"
+                          type="text"
+                          class="form-control"
+                          data-validation-required="#last_name_error_required"
+                          name="last_name"
+                      >
+
+                  <div class="clearfix"></div>
+
+                  <div id="last_name_error_required" class="alert alert-danger">
+                    Last Name is required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" data-sb="fadeInRight">Sex</label>
+                <div class="col-sm-10">
+                  <select name="sex"  data-sb="fadeInLeft" class="form-control">
+                    <option value="1">Personal</option>
+                    <option value="2">Female</option>
+                    <option value="3">Male</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" data-sb="fadeInRight">Profession</label>
+                <div class="col-sm-10">
+                  <select name="profession" class="form-control" data-sb="fadeInLeft">
+                    <option value="1">Programmer</option>
+                    <option value="2">Front End Developer</option>
+                    <option value="3">jQuery Fan</option>
+                    <option value="4">Not Sure</option>
+                  </select>
+                </div>
+              </div>
+
+              <ul class="pager">
+                <li class="right" data-sb="bounceInLeft"><a class="next" data-step-next>Next &raquo;</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div data-step>
+              <h4 data-sb="fadeInLeft">Account Information</h4>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" data-sb="rollIn">Email Address</label>
+                <div class="col-sm-10">
+                  <input  data-sb="bounceInLeft"
+                          type="text"
+                          class="form-control"
+                          data-validation-required="#email_error_required"
+                          data-validation-email="#email_error_invalid"
+                          name="email"
+                      >
+
+                  <div class="clearfix"></div>
+
+                  <div id="email_error_required" class="alert alert-danger">
+                    Email is required
+                  </div>
+                  <div id="email_error_invalid" class="alert alert-danger">
+                    Email is invalid
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" data-sb="rollIn">Password</label>
+                <div class="col-sm-10">
+                  <input data-sb="bounceInLeft"
+                         type="password"
+                         class="form-control"
+                         data-validation-required="#password_error_required"
+                         name="password"
+                      >
+
+                  <div class="clearfix"></div>
+
+                  <div id="password_error_required" class="alert alert-danger">
+                    Password is required
+                  </div>
+                </div>
+              </div>
+
+              <ul class="pager">
+                <li class="left" data-sb="bounceInLeft"><a class="prev" data-step-previous="">&laquo; Previous</a></li>
+                <li class="right" data-sb="bounceInLeft"><a class="next" data-step-finish>Finish &raquo;</a></li>
+              </ul>
+
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-center">Your Profile</h4>
+          <div class="cascading-container">
+            <div data-step-mirror-cascading>
+              <hr/>
+              <h5>Personal Information</h5>
+              <hr/>
+              <p>First Name : <span data-input-mirror='[name="first_name"]'></span></p>
+              <p>Last Name : <span data-input-mirror='[name="last_name"]'></span></p>
+              <p>Sex : <span data-input-mirror='[name="sex"]'></span></p>
+              <p>Profession : <span data-input-mirror='[name="profession"]'></span></p>
+            </div>
+            <div data-step-mirror-cascading>
+              <hr/>
+              <h5>Account Information</h5>
+              <hr/>
+              <p>Email : <span data-input-mirror='[name="email"]'></span></p>
+              <p>Password : <span data-input-mirror='[name="password"]'></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
